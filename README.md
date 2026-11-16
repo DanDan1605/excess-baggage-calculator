@@ -1,12 +1,14 @@
-# ict602
+# Baggage calculator
 
-A new Flutter project.
+This is a new project for the Mobile Development assignment 1
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+ICT602 Mobile Technology – Individual Assignment (20%) 
+Author: ADAM DANIAL BIN MOHAMMAD HADI 
+Matrics Number : 2025227982
+Lecturer: Madam Idayati Binti Mazlan
 
-A few resources to get you started if this is your first Flutter project:
 
 - [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
 - [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
