@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ict602"
+        android:label="Excess baggage calc"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

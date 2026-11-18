@@ -568,7 +568,7 @@ class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
   // Replace with your actual GitHub repository URL
-  final String _githubUrl = 'https://github.com/DanDan1605/excess-baggage-estimator';
+  final String _githubUrl = 'https://github.com/DanDan1605/excess-baggage-calculator ';
 
   Future<void> _launchGitHub() async {
     final Uri uri = Uri.parse(_githubUrl);
