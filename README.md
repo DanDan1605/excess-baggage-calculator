@@ -1,17 +1,46 @@
-# ict602
+# Excess Baggage Fee Estimator
 
-A new Flutter project.
+A Flutter mobile application built to estimate excess baggage fees for air travel
 
-## Getting Started
+## Student & Course Information
+* **Course:** ICT602 - Mobile Technology (Individual Assignment - 20%)
+* **Author:** ADAM DANIAL BIN MOHAMMAD HADI
+* **Matric Number:** 2025227902
+* **Lecturer:** Madam Idayati Binti Mazlan
+* **GitHub Repository:** [excess-baggage-calculator](https://github.com/DanDan1605/excess-baggage-calculator)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Project Overview & Calculation Rules
+This application calculates excess baggage charges based on checked baggage weight, ticket class allowance, and excess rate per kilogram:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+1. **Free Baggage Allowance ($X$):**
+   * **Economy Class:** `20 kg`
+   * **Business Class:** `40 kg`
+2. **Excess Baggage Weight:**
+   $$\text{Excess Weight} = \max(0, \text{Baggage Weight} - X)$$
+   *(If baggage weight is less than or equal to $X$, excess weight is `0 kg`—never negative)
+3. **Excess Baggage Charge:**
+   $$\text{Excess Charge} = \text{Excess Weight (kg)} \times \text{Rate per kg (RM)}$$
+4. **Total Amount Payable (incl. 8% Service Tax):**
+   $$\text{Total Payable} = \text{Excess Charge} + (0.08 \times \text{Excess Charge})$$
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Sample Test Cases
+
+| Baggage Weight (kg) | Ticket Class | Rate / kg (RM) | Excess Weight (kg) | Excess Charge (RM) | Total Payable (RM) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 25.0 | Economy | 15.00 | 5.00 | 75.00 | 81.00 |
+| 18.0 | Economy | 15.00 | 0.00 | 0.00 | 0.00 |
+| 55.0 | Business | 12.00 | 15.00 | 180.00 | 194.40 |
+| 42.5 | Business | 12.00 | 2.50 | 30.00 | 32.40 |
+
+---
+
+## Features Implemented
+* **Interactive Inputs:** Decimal numeric inputs for baggage weight and rate per kg, paired with a custom Material 3 selection widget for Economy and Business classes.
+* **Formatted Summary Output:** Displays excess weight, base excess charge, 8% service tax breakdown, and total payable formatted to two decimal places.
+* **Navigation Menu:** Drawer navigation switching seamlessly between the **Home** calculator and the **About** page.
+* **About Page:** Displays the custom app icon, student details, copyright notice, and a clickable GitHub repository link powered by `url_launcher`.
+* **Input Validation & Design:** Includes upfront allowance instructions, error handling via floating SnackBars for invalid/empty inputs, and a one-tap reset button.
